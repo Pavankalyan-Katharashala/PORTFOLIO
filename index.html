@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pavan Kalyan Katharashala | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent1: #38bdf8;
+      --accent2: #a78bfa;
+      --card: rgba(15, 23, 42, 0.85);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: rgba(255,255,255,0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* 🌈 Animated Background */
+    body {
+      background: linear-gradient(
+        -45deg,
+        #020617,
+        #0b102a,
+        #1b0f3a,
+        #06283d,
+        #1f2937
+      );
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2,6,23,0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .logo span {
+      color: var(--accent1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--accent1);
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      padding: 8rem 10%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    .hero-text h1 span {
+      color: var(--accent1);
+    }
+
+    .hero-text p {
+      margin: 1.2rem 0;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #020617;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* IMAGE */
+    .hero-photo {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    section {
+      padding: 5rem 10%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      border-radius: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.8rem;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .icon {
+      font-size: 1.6rem;
+      color: var(--accent1);
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        grid-template-columns: 1fr;
+        padding-top: 6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Pavan<span>Kalyan</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="about">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Pavan Kalyan Katharashala</span></h1>
+    <p>
+      B.Tech Computer Science student passionate about AI, Machine Learning,
+      and building premium web experiences.
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="https://drive.google.com/file/d/1LZzmJFC6AIaAhKifip_MQjovQKg8rspv/view?usp=sharing"
+   class="btn primary" target="_blank">View Resume</a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="profile.jpeg" alt="Pavan Kalyan Katharashala">
+  </div>
+</header>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><i class="icon fa-solid fa-code"></i><h3>Programming</h3><p>C, Python, Java</p></div>
+    <div class="card"><i class="icon fa-solid fa-globe"></i><h3>Web</h3><p>HTML, CSS, JavaScript</p></div>
+    <div class="card"><i class="icon fa-solid fa-database"></i><h3>Databases</h3><p>SQL, MySQL, MongoDB</p></div>
+    <div class="card"><i class="icon fa-solid fa-brain"></i><h3>AI / ML</h3><p>CNN, U-Net, TensorFlow</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <i class="icon fa-solid fa-eye"></i>
+      <h3>Medi-Scan</h3>
+      <p>AI-driven diabetic retinopathy detection using CNN & U-Net.</p>
+      <a href="https://github.com/Pavankalyan-Katharashala/Medi-Scan-AI-Driven-Retinal-Image-Analysis-for-Diabetic-Retinopathy" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="card">
+      <i class="icon fa-solid fa-face-smile"></i>
+      <h3>6 Emotions Classification</h3>
+      <p>CNN-based facial emotion recognition system.</p>
+      <a href="https://github.com/Pavankalyan-Katharashala/6-EMOTIONS-FOR-IMAGE-CLASSIFICATION" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="card">
+      <i class="icon fa-solid fa-cloud"></i>
+      <h3>Weather Prediction</h3>
+      <p>Machine learning-based weather forecasting system.</p>
+      <a href="https://github.com/Pavankalyan-Katharashala/Weather_Prediction" target="_blank">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:pavankatherashala345@gmail.com">pavankatherashala345@gmail.com</a></p>
+    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Pavankalyan-Katharashala" target="_blank">GitHub</a></p>
+    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/pavan-kalyan-katharashala-b52b092b8/" target="_blank">LinkedIn</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Pavan Kalyan Katharashala · Premium Portfolio
+</footer>
+
+</body>
+</html>
